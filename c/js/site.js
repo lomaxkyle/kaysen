@@ -66,15 +66,32 @@
     });
     setWho('senior');
     const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-    form.addEventListener('submit', e => {
+    /* messages go to Kaysen's Gmail through FormSubmit (the first one ever sent asks her to confirm the address) */
+    const INBOX = 'https://formsubmit.co/ajax/kaysenlomaxphotography@gmail.com';
+    const sendBtn = $('button[type="submit"]', form), sendErr = $('#send-err');
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const name = $('#f-name'), email = $('#f-email');
       const checks = [[name, !name.value.trim()], [email, !emailOk(email.value)]];
       checks.forEach(([el, bad]) => { $('.err', el.closest('label')).hidden = !bad; el.setAttribute('aria-invalid', String(bad)); });
       const first = checks.find(([, bad]) => bad);
-      $('#sent').hidden = !!first;
+      $('#sent').hidden = true; sendErr.hidden = true;
       if (first) { first[0].focus(); return; }
-      $('#sent').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+      const who = radios.find(b => b.getAttribute('aria-checked') === 'true');
+      const val = n => (form.elements[n] ? form.elements[n].value.trim() : '');
+      const data = { name: val('name'), email: val('email'), who: who ? who.textContent.trim() : '', date: val('date'), location: val('location'), role: val('role'), message: val('message'),
+        _subject: `New inquiry from ${val('name')}`, _replyto: val('email'), _template: 'table', _honey: val('_honey') };
+      sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+      try {
+        const r = await fetch(INBOX, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+        if (!r.ok) throw new Error(String(r.status));
+        $('#sent').hidden = false;
+        $('#sent').scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+      } catch (err) {
+        sendErr.hidden = false;
+      } finally {
+        sendBtn.disabled = false; sendBtn.textContent = 'Send it to Kaysen';
+      }
     });
   }
   const cb = $('#copy-email');

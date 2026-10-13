@@ -56,8 +56,8 @@ body.clean .fill{background:none;color:inherit;padding:0}
 body.clean .ph b,body.clean .phprint b{visibility:hidden}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border:1.5px solid var(--steel-deep);background:var(--steel-deep);color:var(--paper);font:500 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
-.btn:hover{background:var(--steel-darker);border-color:var(--steel-darker)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border:1.5px solid var(--navy);background:var(--butter);color:var(--navy);font:500 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#F3E88F;border-color:var(--navy)}
 .btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn.ghost:hover{background:var(--navy);color:var(--paper)}
 .btns{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
@@ -183,6 +183,14 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .aud-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(28px,4vw,64px);padding:clamp(56px,7vw,100px) var(--gutter)}
 .aud-body > div{grid-column:1/span 4;display:grid;gap:16px;align-content:start}
 .aud-body h2{font-size:clamp(1.8rem,2.6vw,2.3rem);font-style:italic}
+.aud-body > .tiers-head{grid-column:1/-1;gap:10px;max-width:62ch}
+.aud-body > .tiers{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.tier{display:grid;gap:14px;align-content:start;padding:clamp(20px,2.4vw,32px);border:1px solid var(--line);background:rgba(255,255,255,.55)}
+.tier.featured{border-color:var(--navy);background:var(--sky-2)}
+.tier h3{font-size:clamp(1.6rem,2.4vw,2.1rem);font-style:italic}
+.tier .incl li:first-child{border-top:0}
+.tier .btn{justify-self:start;margin-top:4px}
+.has-tiers .steps{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr))}
 .incl{display:grid}
 .incl li{padding:10px 0;border-top:1px solid var(--line)}
 .steps{grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;gap:28px clamp(24px,3vw,44px);counter-reset:s}
@@ -340,6 +348,7 @@ a.vid:hover b{text-decoration:underline}
 .strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;max-width:900px;width:100%;justify-self:center}
 .strip img{width:100%;aspect-ratio:1;object-fit:cover}
 .copy{text-align:center;font:500 .64rem var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.legal{text-align:center;font:400 .74rem/1.5 var(--sans);opacity:.8;max-width:64ch;margin:10px auto 0}
 
 @media (max-width:900px){
   .menu{padding-top:120px}
@@ -352,6 +361,8 @@ a.vid:hover b{text-decoration:underline}
   .pull{grid-template-columns:1fr 1fr}
   .pull-text{grid-column:1/-1;grid-row:1}
   .aud-head > div:first-child,.prints,.aud-body > div,.steps{grid-column:1/-1}
+  .aud-body > .tiers{grid-template-columns:1fr}
+  .has-tiers .steps{grid-template-columns:1fr 1fr}
   .prints{justify-self:start;max-width:none;width:100%}
   .cases,.cases.four,.vids{grid-template-columns:1fr 1fr}
   .desg{grid-template-columns:1fr 1fr}
