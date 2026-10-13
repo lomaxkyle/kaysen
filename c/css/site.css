@@ -104,11 +104,11 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .hero-row img{width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:0 14px 30px -18px rgba(31,45,58,.55)}
 
 /* sand lede */
-.lede{position:relative;background:var(--sand);color:var(--navy);text-align:center;padding:clamp(56px,7vw,96px) var(--gutter) clamp(64px,8vw,110px);display:grid;justify-items:center;gap:16px}
+.lede{position:relative;background:var(--sand);color:var(--navy);text-align:center;padding:clamp(36px,4.2vw,60px) var(--gutter) clamp(40px,4.6vw,64px);display:grid;justify-items:center;gap:12px}
 .lede h2 em{color:var(--steel-darker)}
-.lede h2{color:var(--navy);font-size:clamp(2rem,3.6vw,3rem);margin-bottom:6px}
+.lede h2{color:var(--navy);font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:2px}
 .lede p{max-width:52ch;font-size:1.02rem}
-.lede .s2{position:absolute;left:10%;bottom:-48px;width:150px;height:150px;color:var(--paper)}
+.lede .s2{position:absolute;left:10%;bottom:-36px;width:110px;height:110px;color:var(--paper)}
 
 /* I do this for */
 .doors-wrap{background:var(--sky);padding:clamp(56px,7vw,96px) var(--gutter)}
@@ -233,7 +233,7 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .ba:has(.ba-range:focus-visible){outline:2px solid var(--steel-deep);outline-offset:3px}
 
 .cases.four{grid-template-columns:repeat(4,minmax(0,1fr))}
-.desg.sets{margin-top:clamp(14px,2vw,28px)}
+
 .des img.fit{object-fit:contain;background:var(--navy)}
 
 /* project galleries: groups of prints with a small label */
@@ -342,7 +342,7 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 @media (max-width:600px){
   body{font-size:16px}
   .hero-row{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .lede .s2{width:90px;height:90px;bottom:-30px;left:6%}
+  .lede .s2{width:70px;height:70px;bottom:-24px;left:6%}
   .tagbtn{font-size:.6rem;padding:9px 10px;letter-spacing:.12em}
   .steps,.fields,.cv{grid-template-columns:1fr}
   .cases,.cases.four,.vids{grid-template-columns:1fr}
