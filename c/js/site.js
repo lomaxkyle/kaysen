@@ -79,6 +79,41 @@
     try { navigator.clipboard.writeText(el.textContent).then(() => { cb.textContent = 'Copied'; setTimeout(() => (cb.textContent = 'Copy'), 1600); }, fallback); } catch (err) { fallback(); }
   });
 
+  /* ---------- video ---------- */
+  const players = $$('.player');
+  function stopPlayer(p) {
+    const m = $('iframe,video', p); if (!m) return;
+    m.remove(); $('.play', p).hidden = false; p.classList.remove('playing');
+  }
+  function startPlayer(p) {
+    players.forEach(o => { if (o !== p) stopPlayer(o); });
+    const btn = $('.play', p); btn.hidden = true; p.classList.add('playing');
+    let m;
+    if (p.dataset.yt) {
+      m = document.createElement('iframe');
+      m.src = `https://www.youtube-nocookie.com/embed/${p.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
+      m.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+      m.allowFullscreen = true; m.referrerPolicy = 'strict-origin-when-cross-origin';
+    } else {
+      m = document.createElement('video');
+      m.src = p.dataset.src; m.controls = true; m.autoplay = true; m.playsInline = true; m.poster = $('img', btn).src;
+    }
+    m.title = p.dataset.title || 'Video';
+    p.appendChild(m);
+  }
+  players.forEach(p => $('.play', p).addEventListener('click', () => startPlayer(p)));
+  $$('.pset').forEach(set => {
+    const p = document.getElementById(set.dataset.for); if (!p) return;
+    $$('button', set).forEach(b => b.addEventListener('click', () => {
+      $$('button', set).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      const was = p.classList.contains('playing'); stopPlayer(p);
+      p.dataset.yt = b.dataset.yt; p.dataset.title = b.dataset.title;
+      const btn = $('.play', p), img = $('img', btn);
+      img.src = b.dataset.poster; img.alt = `${b.dataset.title} title card`; btn.setAttribute('aria-label', `Play ${b.dataset.title}`);
+      if (was) startPlayer(p);
+    }));
+  });
+
   /* ---------- router ---------- */
   function route() {
     const h = (location.hash || '#home').slice(1);
@@ -87,6 +122,7 @@
     const key = page.dataset.parent || page.dataset.page;
     $$('[data-nav]').forEach(a => (a.dataset.nav === key ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
     closeMenu(false);
+    players.forEach(stopPlayer);
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     const h1 = $('h1', page);
     document.title = key === 'home' ? 'Kaysen Lomax · Photographer & Multimedia Creator · Jonesboro, AR' : `${h1 ? h1.textContent.trim() : ''} · Kaysen Lomax`;
