@@ -154,6 +154,8 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .pull h2 em{color:var(--steel-deep)}
 .pull .mkw{position:relative;display:inline-block}
 .pull .mk-under{color:var(--steel);left:2%;width:96%;height:.28em;margin-top:-.02em}
+.values .v1{position:relative}
+.values .v-spark{position:absolute;left:4%;bottom:-34px;width:42px;height:42px;transform:rotate(-12deg)}
 .values h3 .mk-after{left:100%;right:auto;top:-.6em;width:1.1em;height:1.1em}
 
 /* pull quote */
