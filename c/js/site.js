@@ -119,13 +119,21 @@
       if (b.dataset.src) p.dataset.src = b.dataset.src; else delete p.dataset.src;
       const btn = $('.play', p), img = $('img', btn);
       img.src = b.dataset.poster; img.alt = `${b.dataset.title} title card`; btn.setAttribute('aria-label', `Play ${b.dataset.title}`);
+      /* the chosen film's own notes show beside the player */
+      $$('.film-note', p.closest('.page')).forEach(n => { n.hidden = n.dataset.film !== b.dataset.key; });
       if (was) startPlayer(p);
     }));
   });
+  /* #case-impact/sisterhood opens the Chi Omega page on that film */
+  function pickFilm(page, key) {
+    const set = $('.pset', page); if (!set) return;
+    const b = (key && $(`button[data-key="${key}"]`, set)) || $('button', set);
+    if (b && b.getAttribute('aria-pressed') !== 'true') b.click();
+  }
 
   /* ---------- router ---------- */
   function route() {
-    const h = (location.hash || '#home').slice(1);
+    const [h, sub] = (location.hash || '#home').slice(1).split('/');
     const page = $$('.page').find(p => p.dataset.page === h) || $('.page[data-page="home"]');
     $$('.page').forEach(p => p.classList.toggle('on', p === page));
     const key = page.dataset.parent || page.dataset.page;
@@ -135,6 +143,7 @@
     setGroup(inGroup);
     closeMenu(false);
     players.forEach(stopPlayer);
+    pickFilm(page, sub);
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     const h1 = $('h1', page);
     document.title = key === 'home' ? 'Kaysen Lomax · Photographer & Multimedia Creator · Jonesboro, AR' : `${h1 ? h1.textContent.trim() : ''} · Kaysen Lomax`;
