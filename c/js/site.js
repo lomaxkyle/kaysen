@@ -21,6 +21,11 @@
     if (returnFocus) amp.focus();
   }
   amp.addEventListener('click', () => (menu.classList.contains('open') ? closeMenu(true) : openMenu()));
+  /* portfolio dropdown inside the menu */
+  const gbtn = $('#group-btn');
+  const setGroup = open => { gbtn.setAttribute('aria-expanded', String(open)); $('#group-list').inert = !open; };
+  gbtn.addEventListener('click', () => setGroup(gbtn.getAttribute('aria-expanded') !== 'true'));
+  $('#group-list').inert = true;
   addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(true); });
 
   /* ---------- notes ---------- */
@@ -81,6 +86,8 @@
 
   /* ---------- video ---------- */
   const players = $$('.player');
+  /* the claude.ai draft host blocks every third-party iframe, so there we play the compact MP4 copy instead of the YouTube embed */
+  const noEmbeds = () => /claudeusercontent\.com$/.test(location.hostname) || document.documentElement.dataset.embeds === 'off';
   function stopPlayer(p) {
     const m = $('iframe,video', p); if (!m) return;
     m.remove(); $('.play', p).hidden = false; p.classList.remove('playing');
@@ -89,7 +96,7 @@
     players.forEach(o => { if (o !== p) stopPlayer(o); });
     const btn = $('.play', p); btn.hidden = true; p.classList.add('playing');
     let m;
-    if (p.dataset.yt) {
+    if (p.dataset.yt && !(p.dataset.src && noEmbeds())) {
       m = document.createElement('iframe');
       m.src = `https://www.youtube-nocookie.com/embed/${p.dataset.yt}?autoplay=1&rel=0&playsinline=1`;
       m.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
@@ -108,6 +115,7 @@
       $$('button', set).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
       const was = p.classList.contains('playing'); stopPlayer(p);
       p.dataset.yt = b.dataset.yt; p.dataset.title = b.dataset.title;
+      if (b.dataset.src) p.dataset.src = b.dataset.src; else delete p.dataset.src;
       const btn = $('.play', p), img = $('img', btn);
       img.src = b.dataset.poster; img.alt = `${b.dataset.title} title card`; btn.setAttribute('aria-label', `Play ${b.dataset.title}`);
       if (was) startPlayer(p);
@@ -121,6 +129,9 @@
     $$('.page').forEach(p => p.classList.toggle('on', p === page));
     const key = page.dataset.parent || page.dataset.page;
     $$('[data-nav]').forEach(a => (a.dataset.nav === key ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
+    const inGroup = gbtn.dataset.navGroup.split(' ').includes(key);
+    if (inGroup) gbtn.setAttribute('aria-current', 'true'); else gbtn.removeAttribute('aria-current');
+    setGroup(inGroup);
     closeMenu(false);
     players.forEach(stopPlayer);
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });

@@ -29,13 +29,18 @@
 
 <nav class="menu" id="menu" aria-label="Main" aria-hidden="true">
   <div class="big">
-    <a href="#seniors" data-nav="seniors">Seniors</a>
-    <a href="#weddings" data-nav="weddings">Weddings</a>
-    <a href="#families" data-nav="families">Families &amp; Events</a>
-    <a href="#brands" data-nav="brands">Brands &amp; Media</a>
-  </div>
-  <div class="small">
     <a href="#home" data-nav="home">Home</a>
+    <div class="group" id="menu-group">
+      <button class="group-btn" id="group-btn" type="button" aria-expanded="false" aria-controls="group-list" data-nav-group="seniors weddings families brands">Portfolio<span class="chev" aria-hidden="true"></span></button>
+      <div class="group-list" id="group-list">
+        <div>
+          <a href="#seniors" data-nav="seniors">Seniors</a>
+          <a href="#weddings" data-nav="weddings">Weddings</a>
+          <a href="#families" data-nav="families">Families &amp; Events</a>
+          <a href="#brands" data-nav="brands">Brands &amp; Media</a>
+        </div>
+      </div>
+    </div>
     <a href="#about" data-nav="about">About</a>
     <a href="#contact" data-nav="contact">Contact</a>
   </div>
@@ -46,21 +51,21 @@
 
 <!-- ==================== HOME ==================== -->
 <section class="page" data-page="home">
-  <div class="intro">
-    <p class="label">Kaysen Lomax · Photographer &amp; multimedia creator</p>
-    <h1>Senior, wedding &amp; family photography in <em>Jonesboro, Arkansas</em></h1>
-    <p class="lead">Plus headshots, video and design for brands and businesses across Northeast Arkansas.</p>
-    <div class="btns"><a class="btn" href="#contact">Book a session</a><a class="btn ghost" href="#seniors">See the work</a></div>
-  </div>
-  <div class="collage">
-    <img class="print k1" src="images/p-senior-redwolf-mural.jpg" alt="Graduate in a white dress and stole in front of the red Red Wolf mural">
-    <img class="print k2" src="images/p-wedding-reception-kiss.jpg" alt="Bride and groom kissing in front of blush drapes and flowers">
-    <img class="print k3" src="images/p-couple-capitol-steps.jpg" alt="Couple seated on the marble steps of the State Capitol, nose to nose">
-    <figure class="polaroid k4"><img src="images/p-senior-clocktower-toss.jpg" alt="Graduate tossing her cap in front of the campus clock tower"><figcaption>cap &amp; gown</figcaption></figure>
-    <img class="print k5" src="images/p-senior-cap-toss.jpg" alt="Graduate in a navy blazer tossing his cap under a pergola">
-    <img class="print k6" src="images/p-senior-green-dress.jpg" alt="Senior girl in a green dress smiling among wildflowers">
-    <img class="print k7" src="images/p-family-cotton-row.jpg" alt="Family of three walking down a cotton-field road at sunset">
-    <svg class="stamp s1" aria-hidden="true"><use href="#sprig"/></svg>
+  <div class="hero">
+    <div class="hero-card">
+      <h1><span class="nm">Kaysen Lomax</span><span class="role">Jonesboro Photographer</span></h1>
+      <span class="rule" aria-hidden="true"></span>
+      <div class="tags"><a href="#seniors">Seniors</a><a href="#weddings">Weddings</a><a href="#families">Families &amp; Events</a><a href="#brands">Brands</a></div>
+      <a class="btn" href="#contact">Book a session</a>
+    </div>
+    <div class="hero-row">
+      <img src="images/p-couple-capitol-steps.jpg" alt="Couple seated on the marble steps of the State Capitol, nose to nose">
+      <img src="images/p-senior-green-dress.jpg" alt="Senior girl in a green dress smiling among wildflowers">
+      <img src="images/p-wedding-reception-kiss.jpg" alt="Bride and groom kissing in front of blush drapes and flowers">
+      <img src="images/p-family-cotton-row.jpg" alt="Family of three walking down a cotton-field road at sunset">
+      <img src="images/p-senior-cap-toss.jpg" alt="Graduate in a navy blazer tossing his cap under a pergola">
+      <img src="images/p-toddler-blue-bow.jpg" alt="Toddler in a blue dress and white bow smiling among wildflowers">
+    </div>
   </div>
 
   <section class="lede">
@@ -225,15 +230,16 @@
     <div>
       <p class="label rule">For businesses &amp; employers</p>
       <h1>Brands &amp; Media</h1>
-      <p class="lead">Video, design and marketing work: chapter films, a spec commercial, posters, ads, invitations, and a year running social media for a local pharmacy.</p>
+      <p class="lead">Video, design and marketing work: chapter films, a spec commercial, a full marketing year for a local pharmacy, my own brand identity, and the posters, invitations and ads in between.</p>
       <div class="btns"><a class="btn" href="#contact">Hire me</a><a class="btn ghost" href="#about">Résumé &amp; experience</a></div>
     </div>
   </div>
 
   <div class="sec"><p class="label rule">Projects</p>
-    <div class="cases">
+    <div class="cases four">
+      <a href="#case-pharmacy"><span class="img"><img src="images/d-sp-web-01-home.jpg" alt=""></span><b>Southern Pharmacy</b><span>Marketing · 2024–26</span></a>
+      <a href="#case-brand"><span class="img"><img src="images/d-klp-business-card.jpg" alt="" style="object-position:left center"></span><b>Kaysen Lomax Photography</b><span>Brand identity · 2025–26</span></a>
       <a href="#case-impact"><span class="img"><img src="images/video-make-an-impact.jpg" alt=""></span><b>Chi Omega films</b><span>Three chapter videos · 2024–26</span></a>
-      <a href="#case-pharmacy"><span class="img"><img src="images/design-hormone-house-party.jpg" alt=""></span><b>Southern Pharmacy</b><span>Marketing · 2024–25</span></a>
       <a href="#case-stanley"><span class="img"><img src="images/yt-qPALedo8Fls.jpg" alt=""></span><b>Stanley Quencher</b><span>Spec commercial</span></a>
     </div>
   </div>
@@ -243,44 +249,55 @@
       <img src="images/p-headshot-tan-blazer.jpg" alt="Studio headshot of a woman in a tan blazer">
       <img src="images/p-headshot-laugh.jpg" alt="Studio portrait of a woman laughing in a dark blazer">
       <img src="images/p-headshot-suit.jpg" alt="Studio headshot of a man in a navy suit">
+      <img src="images/p-headshot-denim-laugh.jpg" alt="Studio headshot of a young woman in a denim top, laughing">
+      <img src="images/p-headshot-sisters.jpg" alt="Studio headshot of two sisters in green and denim, side by side">
+      <img src="images/p-headshot-girl-green.jpg" alt="Studio headshot of a girl in a green dress with a braid">
     </div>
   </div>
 
   <div class="sec"><p class="label rule">Video</p>
-    <div class="feature-vid">
-      <div class="player" id="chi-films" data-yt="mGoFYhAf6yA" data-title="Make an Impact">
-        <button class="play" type="button" aria-label="Play Make an Impact"><img src="images/video-make-an-impact.jpg" alt="Make an Impact, Make a Wish title card"><span class="pbtn" aria-hidden="true">▶</span></button>
-      </div>
-      <div class="ftext">
-        <h2>Chi Omega chapter films</h2>
-        <p class="prose">Three films for Arkansas State's Chi Omega chapter: a philanthropy piece on its work with Make-A-Wish, a 2026 welcome film, and the 2024 sisterhood video. Pick one and it plays right here.</p>
-        <div class="pset" data-for="chi-films" role="group" aria-label="Choose a film">
-          <button type="button" aria-pressed="true" data-yt="mGoFYhAf6yA" data-poster="images/video-make-an-impact.jpg" data-title="Make an Impact"><b>Make an Impact</b><span>Make-A-Wish · 2026 · 4:16</span></button>
-          <button type="button" aria-pressed="false" data-yt="sGHPgX28cF8" data-poster="images/video-welcome-chi-omega.jpg" data-title="Welcome to Chi Omega"><b>Welcome to Chi Omega</b><span>Chapter film · 2026 · 4:36</span></button>
-          <button type="button" aria-pressed="false" data-yt="n2tW1Xy11oU" data-poster="images/video-sisterhood.jpg" data-title="Sisterhood"><b>Sisterhood</b><span>Chapter film · 2024 · 4:10</span></button>
-        </div>
-        <a class="textlink" href="#case-impact">About the films →</a>
-      </div>
-    </div>
     <div class="vids">
+      <figure class="vid"><div class="player" data-yt="mGoFYhAf6yA" data-src="video/make-an-impact.mp4" data-title="Make an Impact"><button class="play" type="button" aria-label="Play Make an Impact"><img src="images/video-make-an-impact.jpg" alt="Make an Impact, Make a Wish title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-impact">Make an Impact</a></b><span>Chi Omega · Make-A-Wish · 2026 · 4:16</span></figcaption></figure>
+      <figure class="vid"><div class="player" data-yt="sGHPgX28cF8" data-src="video/welcome-to-chi-omega.mp4" data-title="Welcome to Chi Omega"><button class="play" type="button" aria-label="Play Welcome to Chi Omega"><img src="images/video-welcome-chi-omega.jpg" alt="Welcome to Chi Omega title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-impact">Welcome to Chi Omega</a></b><span>Chi Omega · Chapter film · 2026 · 4:36</span></figcaption></figure>
+      <figure class="vid"><div class="player" data-yt="n2tW1Xy11oU" data-src="video/sisterhood.mp4" data-title="Sisterhood"><button class="play" type="button" aria-label="Play Sisterhood"><img src="images/video-sisterhood.jpg" alt="Sisterhood title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-impact">Sisterhood</a></b><span>Chi Omega · Chapter film · 2024 · 4:10</span></figcaption></figure>
       <figure class="vid"><div class="player" data-src="video/sorority-life.mp4" data-title="Sorority Life"><button class="play" type="button" aria-label="Play Sorority Life"><img src="images/video-sorority-life.jpg" alt="A-State Sorority Life title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b>Sorority Life</b><span>A-State · 0:33</span></figcaption></figure>
-      <figure class="vid"><div class="player" data-yt="qPALedo8Fls" data-title="Stanley Quencher :30"><button class="play" type="button" aria-label="Play the Stanley Quencher 30-second spot"><img src="images/yt-qPALedo8Fls.jpg" alt="Still from the Stanley Quencher commercial"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-stanley">Stanley Quencher</a></b><span>Spec commercial · :30 / :06 / pitch</span></figcaption></figure>
-      <figure class="vid"><div class="player" data-yt="SLY8nv7CcPA" data-title="Color correction reel"><button class="play" type="button" aria-label="Play the color correction reel"><img src="images/yt-SLY8nv7CcPA.jpg" alt="Still from the color correction reel"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b>Color correction reel</b><span>Before &amp; after grades · 1:50</span></figcaption></figure>
+      <figure class="vid"><div class="player" data-yt="qPALedo8Fls" data-src="video/stanley-30.mp4" data-title="Stanley Quencher :30"><button class="play" type="button" aria-label="Play the Stanley Quencher 30-second spot"><img src="images/yt-qPALedo8Fls.jpg" alt="Still from the Stanley Quencher commercial"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-stanley">Stanley Quencher</a></b><span>Spec commercial · :30 / :06 / pitch</span></figcaption></figure>
+      <figure class="vid"><div class="player" data-yt="SLY8nv7CcPA" data-src="video/color-reel.mp4" data-title="Color correction reel"><button class="play" type="button" aria-label="Play the color correction reel"><img src="images/yt-SLY8nv7CcPA.jpg" alt="Still from the color correction reel"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b>Color correction reel</b><span>Before &amp; after grades · 1:50</span></figcaption></figure>
       <figure class="vid"><img src="images/yt-jeoq3w4RFJY.jpg" alt="Still from the short film The Heist"><figcaption><b>The Heist</b><span>Short film · Coming soon</span></figcaption></figure>
     </div>
-    <p class="note"><b>Kaysen:</b> The Heist's YouTube link from the old site now says "video unavailable." Make it unlisted (not private) or send a new link and it will play here too. Add your role for each video, like "Shot, edited and color graded."</p>
+    <p class="note"><b>Kaysen:</b> these are the three Chi Omega films from your old site. If you have more, upload them to YouTube as unlisted and send the links; they go in this first row. The Heist's old YouTube link now says "video unavailable," so make it unlisted or send a new link. Add your role for each video, like "Shot, edited and color graded."</p>
   </div>
 
   <div class="sec"><p class="label rule">Design</p>
     <div class="desg">
       <figure class="des"><img src="images/design-typecast.jpg" alt="Typecast magazine cover"><figcaption><b>Typecast</b><span>Magazine cover</span></figcaption></figure>
+      <figure class="des"><img src="images/d-swift-logo.jpg" alt="The Swift Effect ticket-stub logo with a beaded bracelet on a pastel gradient"><figcaption><b>The Swift Effect</b><span>Blog brand · logo + 4 posts</span></figcaption></figure>
+      <figure class="des"><img src="images/d-bridal-taylor-front.jpg" alt="Pink toile bridal shower invitation with an arched frame"><figcaption><b>Bridal shower, Taylor</b><span>Invitation, front &amp; back</span></figcaption></figure>
       <figure class="des"><img src="images/design-perfect-stranger.jpg" alt="Perfect Stranger movie poster"><figcaption><b>Perfect Stranger</b><span>Movie poster</span></figcaption></figure>
       <figure class="des"><div class="ba" style="--pos:50%"><img src="images/restore-after.jpg" alt="Army portrait restored and colorized"><img class="before" src="images/restore-before.jpg" alt="Damaged original army portrait"><span class="handle" aria-hidden="true"></span><input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after restoration"></div><figcaption><b>Photo restoration</b><span>Drag to compare</span></figcaption></figure>
+      <figure class="des"><img src="images/d-ohcrumb-sunrise.jpg" alt="Oh Crumb post: Sunrise Stack, a bacon and egg bagel on a sunburst"><figcaption><b>Oh Crumb</b><span>Bagel truck brand · logo + 7 posts</span></figcaption></figure>
+      <figure class="des"><img src="images/d-bridal-riley-front.jpg" alt="Bridal shower invitation with a green botanical border and pink script"><figcaption><b>Bridal shower, Riley</b><span>Invitation, front &amp; back</span></figcaption></figure>
       <figure class="des"><img src="images/design-inner-city.jpg" alt="Inner City double exposure"><figcaption><b>Inner City</b><span>Double exposure</span></figcaption></figure>
-      <figure class="des"><img src="images/design-hormone-house-party.jpg" alt="Hormone House Party invitation"><figcaption><b>Hormone House Party</b><span>Invitation</span></figcaption></figure>
+      <figure class="des"><img src="images/d-engagement-invite.jpg" alt="Black and white invitation reading shhhhhh, he's going to propose"><figcaption><b>Surprise engagement</b><span>Invitation</span></figcaption></figure>
+      <figure class="des"><img src="images/design-hormone-house-party.jpg" alt="Hormone House Party invitation"><figcaption><b>Hormone House Party</b><span>Invitation · Southern Pharmacy</span></figcaption></figure>
+      <figure class="des"><img class="fit" src="images/d-vote-homecoming.jpg" alt="Vote for homecoming story with red script over a photo of a couple by a HOWL sign"><figcaption><b>Vote for homecoming</b><span>Story graphic</span></figcaption></figure>
       <figure class="des"><img src="images/design-kaysen-klassic.jpg" alt="Photography ad reading Where Every Shot is a Kaysen Klassic"><figcaption><b>Kaysen Klassic</b><span>Photography ad</span></figcaption></figure>
+      <figure class="des"><img src="images/d-cardinal-cabinet.jpg" alt="Blue retro poster listing the 2026 Cardinal Cabinet"><figcaption><b>Cardinal Cabinet</b><span>Roster poster</span></figcaption></figure>
       <figure class="des"><img src="images/design-aqua-excursions.jpg" alt="Aqua Excursions kayak sale ad"><figcaption><b>Aqua Excursions</b><span>Print ad</span></figcaption></figure>
+      <figure class="des"><img class="fit" src="images/d-astate-health-1.jpg" alt="Black slide with huge red and white type reading A-State Free Campus Service, Student Health Care"><figcaption><b>Student Health Care</b><span>Presentation</span></figcaption></figure>
       <figure class="des"><img src="images/design-frank-stein.jpg" alt="The Curse of Frank and Stein poster"><figcaption><b>Frank &amp; Stein</b><span>Composite poster</span></figcaption></figure>
+    </div>
+    <div class="desg sets">
+      <figure class="des"><img src="images/d-swift-globe.jpg" alt="Taylor Swift standing on a glowing globe with the headline The Taylor Swift Effect"><figcaption><b>The Swift Effect</b><span>Blog launch post</span></figcaption></figure>
+      <figure class="des"><img src="images/d-swift-eras.jpg" alt="Post titled Taylor Swift: The Eras That Shaped a Generation over a photo collage"><figcaption><b>The Swift Effect</b><span>Feature post</span></figcaption></figure>
+      <figure class="des"><img src="images/d-ohcrumb-behind.jpg" alt="Oh Crumb post: Behind the Bagel, with raw dough rings and baked bagels on pink"><figcaption><b>Oh Crumb</b><span>Behind the Bagel</span></figcaption></figure>
+      <figure class="des"><img src="images/d-ohcrumb-hotline.jpg" alt="Oh Crumb post: Crumb Crisis Hotline, with a cream cheese bagel on a green to blue gradient"><figcaption><b>Oh Crumb</b><span>Crumb Crisis Hotline</span></figcaption></figure>
+      <figure class="des"><img class="fit" src="images/d-ohcrumb-logo.jpg" alt="Oh Crumb Bagel Sandwiches logo in white line art on a pink to yellow gradient"><figcaption><b>Oh Crumb</b><span>Logo</span></figcaption></figure>
+      <figure class="des"><img src="images/d-swift-blog.jpg" alt="New blog post graphic with a bold white headline over a concert crowd"><figcaption><b>The Swift Effect</b><span>New blog post</span></figcaption></figure>
+      <figure class="des"><img src="images/d-swift-welcome.jpg" alt="Welcome Video cover with a globe mark on a grainy sunset gradient"><figcaption><b>The Swift Effect</b><span>Welcome video cover</span></figcaption></figure>
+      <figure class="des"><img src="images/d-bridal-taylor-back.jpg" alt="Invitation back on pink toile listing nine hosts and an RSVP QR code"><figcaption><b>Bridal shower, Taylor</b><span>Back</span></figcaption></figure>
+      <figure class="des"><img src="images/d-bridal-riley-back.jpg" alt="Invitation back listing hosts, registry, and an RSVP QR code in pink serif"><figcaption><b>Bridal shower, Riley</b><span>Back</span></figcaption></figure>
+      <figure class="des"><img class="fit" src="images/d-astate-health-2.jpg" alt="Slide titled What is it with a photo of the student health center"><figcaption><b>Student Health Care</b><span>Content slide</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -291,30 +308,140 @@
   <div class="story">
     <dl class="facts">
       <div><dt>Role</dt><dd>Marketing Coordinator</dd></div>
-      <div><dt>When</dt><dd>Aug 2024 – May 2025</dd></div>
-      <div><dt>Event</dt><dd>Hormone House Party · May 8, 2025</dd></div>
+      <div><dt>When</dt><dd>Aug 2024 – May 2025, with pieces through 2026</dd></div>
+      <div><dt>Scope</dt><dd>Social media · print · events · campaign pitch · website concept</dd></div>
       <div><dt>Where</dt><dd>Jonesboro, Arkansas</dd></div>
     </dl>
     <div class="text">
-      <p class="prose">Southern Pharmacy needed a consistent look across social media, in-store promotions, and events. In spring 2025, it needed one invitation strong enough to bring 50 of Northeast Arkansas's most influential women to the launch of a new Hormone Optimization &amp; Menopause Awareness initiative. I was the pharmacy's Marketing Coordinator that year, and I designed it.</p>
-      <p class="prose">For ten months I managed the pharmacy's social media accounts, photographed products, events, and promotions, and designed the flyers and graphics that went out in-store and online.</p>
-      <p class="note"><b>Kaysen:</b> add the result (attendance, RSVPs, or what the pharmacy said), the tools you used, and one thing you'd do differently.</p>
+      <p class="prose">Southern Pharmacy is a hometown pharmacy with stores across Northeast Arkansas. For ten months I was its Marketing Coordinator: I ran the social accounts, photographed products and events, and designed everything that went out in-store and online. The work kept coming after the job ended.</p>
+      <p class="prose">The biggest piece was a full campaign pitch under the line "Big Time Service. Small Town Care." It ran 43 slides: audience and tone, 40 scheduled social posts, 10 radio spots, 5 video concepts, a website concept, and a four-phase rollout plan.</p>
+      <p class="prose">Around it: a weekly Wellness Tip Wednesday series, launches for MPowder and CarePacks, the Hormone House Party invitation that brought 50 of the region's most influential women to a menopause awareness event, a tornado response post the night two towns were hit, and in December 2025 the announcement that two locations were passing to another pharmacy.</p>
+      <p class="note"><b>Kaysen:</b> add a result or two (follower growth, event attendance, what the owners said), the tools you used, and confirm which pieces you made after May 2025.</p>
     </div>
   </div>
-  <div class="images"><img class="full" src="images/design-hormone-house-party.jpg" alt="Hormone House Party invitation with soft portraits of women and event details" style="max-width:760px;margin-inline:auto"></div>
+
+  <div class="pgroup"><p class="label rule">Campaign pitch &amp; website concept</p>
+    <div class="shots c2">
+      <img src="images/d-sp-pitch-01-cover.jpg" alt="Deep teal title slide with the Southern Pharmacy logo and Final Campaign Pitch Presentation">
+      <img src="images/d-sp-web-01-home.jpg" alt="Website concept, homepage, with the tagline Big Time Service, Small Town Care">
+    </div>
+    <div class="shots c4">
+      <img src="images/d-sp-web-02-services.jpg" alt="Website concept, services page">
+      <img src="images/d-sp-web-03-refill.jpg" alt="Website concept, refill page">
+      <img src="images/d-sp-web-04-about.jpg" alt="Website concept, about page">
+      <img src="images/d-sp-web-05-contact.jpg" alt="Website concept, contact page">
+    </div>
+    <div class="shots c2">
+      <img src="images/d-sp-pitch-05-ig-grid-a.jpg" alt="Six Instagram posts mocked up in phone frames with their captions">
+      <img src="images/d-sp-pitch-06-ig-grid-b.jpg" alt="Six more Instagram posts mocked up in phone frames">
+    </div>
+    <div class="shots c2">
+      <img src="images/d-sp-pitch-12-fb-grid.jpg" alt="Four Facebook posts mocked up on a sand background: team, delivery, pharmacist, flu shot">
+      <img src="images/d-sp-pitch-13-fb-grid-b.jpg" alt="Four more Facebook posts mocked up on a cream background: refill alerts, thank you, ask a pharmacist, pet meds">
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">Print &amp; in-store</p>
+    <div class="shots c3">
+      <img src="images/d-sp-carepack-flyer.jpg" alt="Blue and white flyer explaining Southern Pharmacy CarePacks">
+      <img src="images/d-sp-mpowder-poster.jpg" alt="18 by 24 poster reading Live your best midlife with four MPowder pouches">
+      <img src="images/design-hormone-house-party.jpg" alt="Hormone House Party invitation with a blue floral border">
+    </div>
+    <div class="shots c3">
+      <img src="images/d-sp-mpowder-flyer.jpg" alt="4 by 6 MPowder flyer with a QR code to book a health coach">
+      <img src="images/d-sp-heart-program.jpg" alt="Heart Health and Stroke Prevention Program handout with a Know Your Numbers chart">
+      <img src="images/d-sp-expert-panel.jpg" alt="Pink announcement introducing a counselor joining the Hormone House Party expert panel">
+    </div>
+    <div class="shots c2">
+      <img src="images/d-sp-flu-card.jpg" alt="Dark teal card reading Stay healthy this season, get your flu shot today">
+      <img src="images/d-sp-mpowder-banner.jpg" alt="Web banner reading A modern approach to hormone balance with a Meno-Boost pouch">
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">Social</p>
+    <div class="shots c4">
+      <img src="images/d-sp-rebuild-together.jpg" alt="Teal-tinted aerial photo of tornado damage with the words We Will Rebuild Together">
+      <img src="images/d-sp-snow-is-coming.jpg" alt="Cream card over a snowy forest reading Snow is coming, with medication reminders">
+      <img src="images/d-sp-aqua-jong.jpg" alt="Pool water with floating mahjong mats and the headline Aqua Jong is here">
+      <img src="images/d-sp-love-is-sweet.jpg" alt="Pink post reading Love is Sweet with Skinny Mixes syrup bottles">
+    </div>
+    <div class="shots c3">
+      <img src="images/d-sp-storefront.jpg" alt="Southern Pharmacy logo in the sky above the brick storefront">
+      <img src="images/d-sp-easter.jpg" alt="Watercolor Easter post reading Happy Easter from Southern Pharmacy">
+      <img src="images/d-sp-health-wellness.jpg" alt="Southern Health and Wellness intro post in gold and teal type">
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">Wellness Tip Wednesday</p>
+    <div class="shots c5">
+      <img src="images/d-sp-wellness-1.jpg" alt="Wellness Tip Wednesday: allergy relief for spring">
+      <img src="images/d-sp-wellness-2.jpg" alt="Wellness Tip Wednesday: spring into hydration">
+      <img src="images/d-sp-wellness-3.jpg" alt="Wellness Tip Wednesday: skin care essentials for spring">
+      <img src="images/d-sp-wellness-4.jpg" alt="Wellness Tip Wednesday: medication spring cleaning">
+      <img src="images/d-sp-wellness-5.jpg" alt="Wellness Tip Wednesday: spring health check-up">
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">December 2025 · Two stores change hands</p>
+    <div class="shots c3">
+      <img src="images/d-sp-last-day-open.jpg" alt="Calendar-page post reading Last Day Open with a handwritten note and the two owners">
+      <img src="images/d-sp-transition-1.jpg" alt="White post announcing prescription records transfer to McFarlin Pharmacy and thanking customers for over 50 years">
+      <img src="images/d-sp-transition-5.jpg" alt="Teal post with the two owners pictured, signed Kyle, Kass and the Southern Pharmacy team">
+    </div>
+  </div>
+  <div class="next"><a href="#case-brand">Next: my own brand →</a><a class="btn" href="#contact">Hire me</a></div>
+</section>
+
+<section class="page project" data-page="case-brand" data-parent="brands">
+  <div class="ptitle"><a class="back" href="#brands">← Brands &amp; Media</a><p class="label rule">Project · Brand identity</p><h1>Kaysen Lomax Photography</h1></div>
+  <div class="story">
+    <dl class="facts">
+      <div><dt>Client</dt><dd>Me</dd></div>
+      <div><dt>When</dt><dd>2025 – 2026</dd></div>
+      <div><dt>Deliverables</dt><dd>Wordmark · palette · business card · flyer · infographic · session promo · brand deck</dd></div>
+      <div><dt>Line</dt><dd>"Photography that feels like you."</dd></div>
+    </dl>
+    <div class="text">
+      <p class="prose">My photography business needed a mark that could sit on a business card, a flyer, an Instagram post and a phone screen without changing its character. I built it as a system: one stacked wordmark in three colorways, a five-color palette, and a set of pieces that all use the same type and spacing.</p>
+      <p class="prose">The palette is soft blue, slate blue, warm gray, pale yellow and charcoal. This website runs on it too.</p>
+      <p class="note"><b>Kaysen:</b> add when you made the mark, what you built it in, and what you'd change next.</p>
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">Wordmark</p>
+    <div class="logos">
+      <div class="on-white"><img src="images/d-klp-logo-dark.png" alt="Kaysen Lomax Photography stacked wordmark in charcoal on white"></div>
+      <div class="on-white"><img src="images/d-klp-logo-blue.png" alt="Kaysen Lomax Photography wordmark in powder blue on white"></div>
+      <div class="on-navy"><img src="images/d-klp-logo-white.png" alt="Kaysen Lomax Photography wordmark in white on navy"></div>
+    </div>
+  </div>
+
+  <div class="pgroup"><p class="label rule">Palette &amp; collateral</p>
+    <div class="shots c2">
+      <img src="images/d-klp-palette.jpg" alt="Color palette card with five named swatches and hex codes">
+      <img src="images/d-klp-business-card.jpg" alt="Business card with Kaysen holding a camera beside the wordmark and contact details">
+    </div>
+    <div class="shots c3">
+      <img class="tall" src="images/d-klp-infographic.jpg" alt="Tall Instagram infographic titled What makes Kaysen Lomax Photography">
+      <img src="images/d-klp-offer-flyer.jpg" alt="Blue flyer reading Special Offer, 20 percent off new client portrait sessions">
+      <img src="images/d-klp-zinnia-minis.jpg" alt="Collage of four zinnia field portraits titled Zinnia Field Mini Sessions">
+      <img src="images/d-klp-deck-cover.jpg" alt="Brand deck cover: Kaysen Lomax Photography with a large blue sparkle">
+      <img src="images/d-klp-deck-thankyou.jpg" alt="Brand deck closing slide reading Thank You with Kaysen holding a camera">
+    </div>
+  </div>
   <div class="next"><a href="#case-impact">Next: Chi Omega films →</a><a class="btn" href="#contact">Hire me</a></div>
 </section>
 
 <section class="page project" data-page="case-impact" data-parent="brands">
   <div class="ptitle"><a class="back" href="#brands">← Brands &amp; Media</a><p class="label rule">Project · Video</p><h1>Chi Omega films</h1></div>
   <div class="vplayer">
-    <div class="player" id="chi-case" data-yt="mGoFYhAf6yA" data-title="Make an Impact">
+    <div class="player" id="chi-case" data-yt="mGoFYhAf6yA" data-src="video/make-an-impact.mp4" data-title="Make an Impact">
       <button class="play" type="button" aria-label="Play Make an Impact"><img src="images/video-make-an-impact.jpg" alt="Make an Impact, Make a Wish title card"><span class="pbtn" aria-hidden="true">▶</span></button>
     </div>
     <div class="pset row" data-for="chi-case" role="group" aria-label="Choose a film">
-      <button type="button" aria-pressed="true" data-yt="mGoFYhAf6yA" data-poster="images/video-make-an-impact.jpg" data-title="Make an Impact"><b>Make an Impact</b><span>Make-A-Wish · 2026 · 4:16</span></button>
-      <button type="button" aria-pressed="false" data-yt="sGHPgX28cF8" data-poster="images/video-welcome-chi-omega.jpg" data-title="Welcome to Chi Omega"><b>Welcome to Chi Omega</b><span>Chapter film · 2026 · 4:36</span></button>
-      <button type="button" aria-pressed="false" data-yt="n2tW1Xy11oU" data-poster="images/video-sisterhood.jpg" data-title="Sisterhood"><b>Sisterhood</b><span>Chapter film · 2024 · 4:10</span></button>
+      <button type="button" aria-pressed="true" data-yt="mGoFYhAf6yA" data-src="video/make-an-impact.mp4" data-poster="images/video-make-an-impact.jpg" data-title="Make an Impact"><b>Make an Impact</b><span>Make-A-Wish · 2026 · 4:16</span></button>
+      <button type="button" aria-pressed="false" data-yt="sGHPgX28cF8" data-src="video/welcome-to-chi-omega.mp4" data-poster="images/video-welcome-chi-omega.jpg" data-title="Welcome to Chi Omega"><b>Welcome to Chi Omega</b><span>Chapter film · 2026 · 4:36</span></button>
+      <button type="button" aria-pressed="false" data-yt="n2tW1Xy11oU" data-src="video/sisterhood.mp4" data-poster="images/video-sisterhood.jpg" data-title="Sisterhood"><b>Sisterhood</b><span>Chapter film · 2024 · 4:10</span></button>
     </div>
   </div>
   <div class="story">
@@ -335,13 +462,13 @@
 <section class="page project" data-page="case-stanley" data-parent="brands">
   <div class="ptitle"><a class="back" href="#brands">← Brands &amp; Media</a><p class="label rule">Project · Spec commercial</p><h1>Stanley Quencher</h1></div>
   <div class="vplayer">
-    <div class="player" id="stanley" data-yt="qPALedo8Fls" data-title="Stanley Quencher :30">
+    <div class="player" id="stanley" data-yt="qPALedo8Fls" data-src="video/stanley-30.mp4" data-title="Stanley Quencher :30">
       <button class="play" type="button" aria-label="Play the 30-second spot"><img src="images/yt-qPALedo8Fls.jpg" alt="Still from the 30-second spot"><span class="pbtn" aria-hidden="true">▶</span></button>
     </div>
     <div class="pset row" data-for="stanley" role="group" aria-label="Choose a cut">
-      <button type="button" aria-pressed="true" data-yt="qPALedo8Fls" data-poster="images/yt-qPALedo8Fls.jpg" data-title="Stanley Quencher :30"><b>The :30</b><span>Full spot</span></button>
-      <button type="button" aria-pressed="false" data-yt="FPWYxz8qjCQ" data-poster="images/yt-FPWYxz8qjCQ.jpg" data-title="Stanley Quencher :06"><b>The :06</b><span>Bumper cut</span></button>
-      <button type="button" aria-pressed="false" data-yt="rmeZHOYS5KE" data-poster="images/yt-rmeZHOYS5KE.jpg" data-title="Stanley Quencher pitch"><b>The pitch</b><span>Campaign presentation · 6:35</span></button>
+      <button type="button" aria-pressed="true" data-yt="qPALedo8Fls" data-src="video/stanley-30.mp4" data-poster="images/yt-qPALedo8Fls.jpg" data-title="Stanley Quencher :30"><b>The :30</b><span>Full spot</span></button>
+      <button type="button" aria-pressed="false" data-yt="FPWYxz8qjCQ" data-src="video/stanley-06.mp4" data-poster="images/yt-FPWYxz8qjCQ.jpg" data-title="Stanley Quencher :06"><b>The :06</b><span>Bumper cut</span></button>
+      <button type="button" aria-pressed="false" data-yt="rmeZHOYS5KE" data-src="video/stanley-pitch.mp4" data-poster="images/yt-rmeZHOYS5KE.jpg" data-title="Stanley Quencher pitch"><b>The pitch</b><span>Campaign presentation · 6:35</span></button>
     </div>
   </div>
   <div class="story">
@@ -430,7 +557,7 @@
     <div class="foot-mark"><svg class="stamp" aria-hidden="true"><use href="#sprig"/></svg><span>Kaysen Lomax</span><small>Photographer &amp; multimedia creator · Jonesboro, Arkansas</small></div>
     <a href="#about">Résumé ↗</a>
   </div>
-  <div class="strip" aria-hidden="true"><img src="images/p-couple-capitol-hall.jpg" alt=""><img src="images/p-couple-proposal.jpg" alt=""><img src="images/p-senior-fall-color.jpg" alt=""><img src="images/p-family-cotton-laugh.jpg" alt=""><img src="images/p-wedding-reception-fun.jpg" alt=""></div>
+  <div class="strip" aria-hidden="true"><img src="images/p-couple-capitol-hall.jpg" alt=""><img src="images/p-couple-proposal.jpg" alt=""><img src="images/p-senior-clocktower-toss.jpg" alt=""><img src="images/p-senior-redwolf-mural.jpg" alt=""><img src="images/p-wedding-reception-fun.jpg" alt=""></div>
   <p class="copy">© 2026 Kaysen Lomax · Now booking Class of 2027 seniors</p>
 </footer>
 
