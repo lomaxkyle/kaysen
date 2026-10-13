@@ -38,6 +38,9 @@ em{font-style:italic}
 .mk-under{position:absolute;left:12%;top:100%;width:76%;height:auto;margin-top:-.1em}
 .mk-under.wave{left:0;width:30%;margin-top:.04em}
 .has-under{margin-bottom:.55em}
+.doors-wrap .label{width:max-content;margin:0 0 18px}
+.mk-arrow{position:absolute;left:100%;top:-30px;width:76px;height:76px;margin-left:8px;transform:rotate(52deg)}
+.mk-star{position:absolute;left:100%;top:-18px;width:50px;height:50px;margin-left:4px;transform:rotate(14deg)}
 .mk-point{position:absolute;right:14px;top:4px;width:104px;height:104px;transform:rotate(-38deg) scaleX(-1)}
 .hi-text h2 .mk-after{width:2.4em;height:2.4em;top:-1.5em;margin-left:-.58em;transform:none}
 
@@ -141,17 +144,19 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .hi-text .cred{font:500 .72rem/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
 
 /* values */
-.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,5vw,80px);padding:clamp(56px,7vw,100px) clamp(var(--gutter),12vw,220px);text-align:center}
-.values .label.rule::before{margin-inline:auto}
-.values p:not(.label){margin-top:6px;font-size:.98rem}
+.values{background:var(--sand);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px);padding:clamp(44px,5vw,72px) clamp(var(--gutter),8vw,140px);text-align:center;color:var(--navy)}
+.values h3{position:relative;display:inline-block;font:italic 400 clamp(1.6rem,2.4vw,2.1rem)/1.1 var(--serif);color:var(--navy);margin:0 0 8px}
+.values p{font-size:1rem}
+.pull{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(56px,7vw,100px) var(--gutter)}
+.pull img{width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:0 18px 36px -24px rgba(31,45,58,.55)}
+.pull-text{text-align:center;display:grid;gap:16px;justify-items:center}
+.pull h2{color:var(--navy);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.12}
+.pull h2 em{color:var(--steel-deep)}
+.pull .mkw{position:relative;display:inline-block}
+.pull .mk-under{color:var(--steel);left:2%;width:96%;height:.28em;margin-top:-.02em}
+.values h3 .mk-after{left:100%;right:auto;top:-.6em;width:1.1em;height:1.1em}
 
 /* pull quote */
-.pull{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding:0 var(--gutter) clamp(64px,8vw,110px);align-items:start}
-.pull-text{grid-column:1/span 5;display:grid;gap:18px;padding-top:clamp(20px,4vw,60px)}
-.pull h2{color:var(--steel-deep);font-size:clamp(1.7rem,2.8vw,2.5rem);line-height:1.15}
-.pull .label{justify-self:end;margin-top:20px}
-.pull .pa{grid-column:7/span 3;width:100%;max-width:300px;aspect-ratio:2/3;object-fit:cover;transform:rotate(-1.5deg);margin-top:60px}
-.pull .pb{grid-column:10/span 3;width:100%;max-width:300px;aspect-ratio:2/3;object-fit:cover;transform:rotate(2deg)}
 
 /* review */
 .review{position:relative;display:grid;justify-items:center;padding:0 var(--gutter) clamp(48px,6vw,80px)}
@@ -293,6 +298,8 @@ a.vid:hover b{text-decoration:underline}
 .cv h2{font-size:1.6rem;font-style:italic;margin-bottom:10px}
 .cv li{padding:10px 0;border-top:1px solid var(--line);font-size:.94rem}
 .cv li b{display:block;font-weight:600;color:var(--navy)}
+.cv li span{display:block}
+.cv li .nowrap{white-space:nowrap}
 
 /* contact */
 .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px clamp(20px,3vw,40px);padding:0 var(--gutter) clamp(56px,7vw,100px)}
@@ -340,9 +347,8 @@ a.vid:hover b{text-decoration:underline}
   .hi-text{padding-left:var(--gutter)}
   .about-text{padding-left:var(--gutter)}
   .values{grid-template-columns:1fr;padding-inline:var(--gutter)}
-  .pull-text{grid-column:1/-1}
-  .pull .pa{grid-column:1/span 6;margin-top:20px}
-  .pull .pb{grid-column:7/span 6}
+  .pull{grid-template-columns:1fr 1fr}
+  .pull-text{grid-column:1/-1;grid-row:1}
   .aud-head > div:first-child,.prints,.aud-body > div,.steps{grid-column:1/-1}
   .prints{justify-self:start;max-width:none;width:100%}
   .cases,.cases.four,.vids{grid-template-columns:1fr 1fr}
@@ -359,6 +365,8 @@ a.vid:hover b{text-decoration:underline}
   .mk-after{left:auto;right:-.3em;top:-1.05em;width:1.1em;height:1.1em}
   .hi-text h2 .mk-after{left:100%;right:auto;top:-1.15em;width:1.9em;height:1.9em;margin-left:-.5em}
   .mk-point{width:84px;height:84px;top:2px;right:10px}
+  .mk-arrow{width:56px;height:56px;top:-22px}
+  .mk-star{width:40px;height:40px;top:-14px}
   .tagbtn{font-size:.6rem;padding:9px 10px;letter-spacing:.12em}
   .steps,.fields,.cv{grid-template-columns:1fr}
   .headshots{grid-template-columns:repeat(3,minmax(0,1fr))}
