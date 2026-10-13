@@ -35,11 +35,11 @@ em{font-style:italic}
 /* pen marks tied to a word: .mk is the word or heading, the mark hangs off it */
 .mk{position:relative;justify-self:start}
 .mk-after{position:absolute;left:100%;top:-.55em;width:1.25em;height:1.25em;margin-left:.08em;transform:rotate(-8deg)}
-.mk-under{position:absolute;left:0;top:100%;width:100%;height:auto;margin-top:-.42em}
-.mk-under.wave{width:52%;margin-top:-.3em}
+.mk-under{position:absolute;left:12%;top:100%;width:76%;height:auto;margin-top:-.38em}
+.mk-under.wave{left:0;width:30%;margin-top:-.22em}
 .has-under{margin-bottom:.3em}
 .mk-point{position:absolute;right:14px;top:4px;width:104px;height:104px;transform:rotate(-38deg) scaleX(-1)}
-.hi-text h2 .mk-after{width:1.9em;height:1.9em;top:-1em;margin-left:0}
+.hi-text h2 .mk-after{width:2.4em;height:2.4em;top:-1.35em;margin-left:-.15em;transform:none}
 
 /* draft bar + notes */
 .draftbar{position:relative;z-index:120;background:var(--ink);color:#E9EEF2;font-size:.8rem}
@@ -357,6 +357,7 @@ a.vid:hover b{text-decoration:underline}
   body{font-size:16px}
   .hero-row{grid-template-columns:repeat(3,minmax(0,1fr))}
   .mk-after{left:auto;right:-.3em;top:-1.05em;width:1.1em;height:1.1em}
+  .hi-text h2 .mk-after{left:100%;right:auto;top:-.95em;width:1.9em;height:1.9em;margin-left:-.1em}
   .mk-point{width:84px;height:84px;top:2px;right:10px}
   .tagbtn{font-size:.6rem;padding:9px 10px;letter-spacing:.12em}
   .steps,.fields,.cv{grid-template-columns:1fr}
