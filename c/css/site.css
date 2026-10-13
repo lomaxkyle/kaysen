@@ -1,8 +1,8 @@
 /* Kaysen Lomax · Option C ("Scrapbook", after Amber Vickery)
-   Kaysen's palette: soft white, powder blue, steel blue, sage and butter yellow; deep steel buttons. EB Garamond italic for warm lines,
+   Kaysen's palette: soft white, powder blue, steel blue, sand and butter yellow; deep steel buttons. EB Garamond italic for warm lines,
    Hanken Grotesk for reading, Source Code Pro small caps for labels. Real photos shown as small prints. */
 :root{
-  --paper:#F5F5F5; --sky:#A2B9CB; --sky-2:#DCE5EC; --steel:#6C8EAD; --sage:#557060; --butter:#FFF9C4;
+  --paper:#F5F5F5; --sky:#A2B9CB; --sky-2:#DCE5EC; --steel:#6C8EAD; --sand:#D0BD96; --butter:#FFF9C4;
   --navy:#24384A; --steel-deep:#41617F; --steel-darker:#33506B; --error:#A3302A;
   --ink:#1F2D3A; --muted:#36444F; --line:rgba(36,56,74,.18);
   --note:#FFF3C4; --note-ink:#5C4700; --note-line:#E6CB5A;
@@ -31,7 +31,7 @@ em{font-style:italic}
 .prose{font-size:1.06rem;line-height:1.7;max-width:62ch}
 .prose + .prose{margin-top:1em}
 .small{font-size:.86rem;color:var(--muted)}
-.stamp{width:110px;height:110px;fill:currentColor;color:var(--sage);pointer-events:none}
+.stamp{width:110px;height:110px;fill:currentColor;color:var(--sand);pointer-events:none}
 
 /* draft bar + notes */
 .draftbar{position:relative;z-index:120;background:var(--ink);color:#E9EEF2;font-size:.8rem}
@@ -100,10 +100,10 @@ body.clean .ph b,body.clean .phprint b,body.clean .ph-band span{visibility:hidde
 .hero-text h1::after{content:"";display:block;height:1.5px;background:var(--steel);margin:10px 0 0 auto;width:110%}
 .hero-text .sub{font-size:.66rem;color:var(--muted)}
 
-/* sage lede */
-.lede{position:relative;background:var(--sage);color:var(--paper);text-align:center;padding:clamp(56px,7vw,96px) var(--gutter) clamp(64px,8vw,110px);display:grid;justify-items:center;gap:16px}
-.lede h2 em{color:var(--butter)}
-.lede h2{color:var(--paper);font-size:clamp(2rem,3.6vw,3rem);margin-bottom:6px}
+/* sand lede */
+.lede{position:relative;background:var(--sand);color:var(--navy);text-align:center;padding:clamp(56px,7vw,96px) var(--gutter) clamp(64px,8vw,110px);display:grid;justify-items:center;gap:16px}
+.lede h2 em{color:var(--steel-darker)}
+.lede h2{color:var(--navy);font-size:clamp(2rem,3.6vw,3rem);margin-bottom:6px}
 .lede p{max-width:52ch;font-size:1.02rem}
 .lede .s2{position:absolute;left:10%;bottom:-48px;width:150px;height:150px;color:var(--paper)}
 
@@ -247,7 +247,7 @@ body.clean .ph b,body.clean .phprint b,body.clean .ph-band span{visibility:hidde
 .fields .full{grid-column:1/-1}
 .opt{text-transform:none;letter-spacing:0;color:var(--muted)}
 .fields input,.fields textarea{font:400 1.05rem var(--sans);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:0;padding:12px 14px;width:100%;text-transform:none;letter-spacing:0}
-.fields input:focus,.fields textarea:focus{outline:2px solid var(--sage);outline-offset:0}
+.fields input:focus,.fields textarea:focus{outline:2px solid var(--steel-deep);outline-offset:0}
 .fields textarea{resize:vertical;min-height:130px}
 .fields [aria-invalid="true"]{border-color:var(--error)}
 .err{font:500 .84rem var(--sans);text-transform:none;letter-spacing:0;color:var(--error)}
