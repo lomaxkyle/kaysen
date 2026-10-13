@@ -15,6 +15,18 @@
     <path d="M61 74 C80 74 98 64 108 46 C88 46 70 56 61 74Z"/>
     <circle cx="38" cy="8" r="4"/><circle cx="82" cy="8" r="4"/><circle cx="60" cy="-4" r="0"/>
   </symbol>
+  <filter id="pen" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <symbol id="spark" viewBox="0 0 120 120"><path d="M56 14 C58 46 70 58 102 60 C70 62 58 74 56 106 C54 74 42 62 10 60 C42 58 54 46 56 14Z"/><path d="M96 6 C97 16 101 20 110 20 C101 20 97 24 96 34 C95 24 91 20 82 20 C91 20 95 16 96 6Z"/><path d="M100 88 C101 94 103 96 108 96 C103 96 101 98 100 104 C99 98 97 96 92 96 C97 96 99 94 100 88Z"/></symbol>
+  <symbol id="aster" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M33 39 L89 83"/><path d="M87 35 L35 85"/><path d="M61 25 L60 93"/><path d="M27 62 L93 58"/></g></symbol>
+  <symbol id="scrib" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M42 48 C28 68 46 94 72 88 C98 80 94 42 66 34 C38 26 18 58 36 80 C50 98 88 94 92 64"/></g></symbol>
+  <symbol id="squig" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M12 64 C22 46 32 46 40 64 C48 82 56 82 64 64 C72 46 80 46 88 64 C96 82 102 82 108 66"/></g></symbol>
+  <symbol id="swirl" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M62 58 C68 54 72 62 66 68 C58 76 44 70 44 58 C44 42 62 32 78 40 C98 50 96 78 76 90 C56 102 28 90 24 66"/></g></symbol>
+  <symbol id="osprk" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M58 16 C61 44 68 54 98 58 C68 63 61 72 60 102 C57 72 50 63 20 61 C50 55 56 44 58 16"/></g></symbol>
+  <symbol id="ding" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M38 72 L50 58"/><path d="M62 52 L63 32"/><path d="M78 64 L95 56"/></g></symbol>
+  <symbol id="loops" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M10 70 C28 32 42 34 40 58 C38 82 22 78 30 60 C38 42 56 38 64 56 C72 74 58 86 54 70 C50 56 66 40 84 48 C100 56 102 70 110 62"/></g></symbol>
+  <symbol id="ostar" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M60 20 L74 92 L20 48 L100 50 L46 92 L62 26"/></g></symbol>
+  <symbol id="arrow" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M18 86 C36 44 66 36 96 44"/><path d="M84 30 L97 44 L84 57"/></g></symbol>
+  <symbol id="oheart" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pen)"><path d="M62 94 C38 74 22 60 26 44 C30 30 46 28 56 40 C60 46 60 46 64 40 C74 28 90 30 94 44 C98 60 82 74 60 90 C58 92 64 98 68 94"/></g></symbol>
 </svg>
 
 <div class="draftbar"><div class="in">
@@ -69,13 +81,13 @@
   </div>
 
   <section class="lede">
-    <svg class="stamp s2" aria-hidden="true"><use href="#sprig"/></svg>
     <h2>Made to be <em>remembered.</em></h2>
     <p>I photograph the people and days you'll want to look back on: senior year, a wedding, a family that's growing up fast.</p>
     <p>I also shoot video and design for brands that need their message to land the first time.</p>
   </section>
 
   <section class="doors-wrap">
+    <svg class="stamp s2" aria-hidden="true"><use href="#swirl"/></svg>
     <p class="label rule">I do this for:</p>
     <div class="doors">
       <a href="#seniors"><span class="img"><img src="images/p-senior-pink-dress.jpg" alt=""></span><span class="tagbtn">Seniors</span></a>
@@ -91,7 +103,7 @@
       <img class="front" src="images/headshot-camera.jpg" alt="Kaysen smiling with her camera on her shoulder">
     </div>
     <div class="hi-text">
-      <svg class="stamp s3" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="stamp s3" aria-hidden="true"><use href="#ding"/></svg>
       <h2>Hi, I'm Kaysen</h2>
       <p>I've been photographing seniors, couples, families and events around Northeast Arkansas since 2018. Since January 2026 I've also shot weddings as a contract photographer with Rustic Pine Media.</p>
       <p>Behind the camera I shoot and edit video and design posters, invitations and ads. I spent a year as Marketing Coordinator for Southern Pharmacy, and I graduate from Arkansas State in December 2026.</p>
@@ -132,6 +144,7 @@
 <section class="page aud" data-page="seniors">
   <div class="aud-head">
     <div>
+      <svg class="stamp s4" aria-hidden="true"><use href="#aster"/></svg>
       <p class="label rule">Senior portraits · Jonesboro</p>
       <h1>Seniors</h1>
       <p class="lead">Your senior year gets one set of photos, and they should look like you. We'll pick spots around Jonesboro or wherever feels like yours, and bring the letter jacket, the truck, or the dog.</p>
@@ -155,7 +168,7 @@
       <li><h3>Say hey</h3><p>Fill out the short form. I reply within <span class="fill">[1–2 business days]</span>.</p></li>
       <li><h3>We plan it</h3><p>Locations, timing, outfits, and the shots that matter to you.</p></li>
       <li><h3>We shoot</h3><p>Relaxed and moving. I guide every pose.</p></li>
-      <li><h3>Your gallery</h3><p>Edited images in a private gallery within <span class="fill">[delivery window]</span>.</p></li>
+      <li><h3>Your gallery</h3><p>Edited images in a private gallery within 4–6 weeks.</p></li>
     </ol>
   </div>
 </section>
@@ -164,6 +177,7 @@
 <section class="page aud" data-page="weddings">
   <div class="aud-head">
     <div>
+      <svg class="stamp s4" aria-hidden="true"><use href="#oheart"/></svg>
       <p class="label rule">Weddings · Northeast Arkansas</p>
       <h1>Weddings</h1>
       <p class="lead">Your wedding day moves fast. My job is to be where the moment is, keep you from stressing about photos, and hand back a gallery that feels like the day did.</p>
@@ -187,7 +201,7 @@
       <li><h3>Check the date</h3><p>Tell me your date and venue. I reply within <span class="fill">[1–2 business days]</span>.</p></li>
       <li><h3>Plan the day</h3><p>Timeline, family photo list, and the moments you care about most.</p></li>
       <li><h3>The day</h3><p>I stay a step ahead so you can stay in it.</p></li>
-      <li><h3>Your gallery</h3><p>Edited images within <span class="fill">[delivery window]</span>.</p></li>
+      <li><h3>Your gallery</h3><p>Edited images within 4–6 weeks.</p></li>
     </ol>
   </div>
 </section>
@@ -196,6 +210,7 @@
 <section class="page aud" data-page="families">
   <div class="aud-head">
     <div>
+      <svg class="stamp s4" aria-hidden="true"><use href="#loops"/></svg>
       <p class="label rule">Families, teams &amp; Greek life</p>
       <h1>Families &amp; Events</h1>
       <p class="lead">Relaxed family sessions, outdoors or at home, kids and dogs welcome. Plus recruitment, formals, philanthropy events, team days and group photos.</p>
@@ -218,7 +233,7 @@
       <li><h3>Say hey</h3><p>Tell me who, where and roughly when.</p></li>
       <li><h3>We plan it</h3><p>Timing, light, and the group shots you need.</p></li>
       <li><h3>We shoot</h3><p>I keep it moving so no one holds a smile for long.</p></li>
-      <li><h3>Your gallery</h3><p>Ready to share within <span class="fill">[delivery window]</span>.</p></li>
+      <li><h3>Your gallery</h3><p>Ready to share within 4–6 weeks.</p></li>
     </ol>
   </div>
 </section>
@@ -227,6 +242,7 @@
 <section class="page" data-page="brands">
   <div class="aud-head brand-head">
     <div>
+      <svg class="stamp s4" aria-hidden="true"><use href="#osprk"/></svg>
       <p class="label rule">For businesses &amp; employers</p>
       <h1>Brands &amp; Media</h1>
       <p class="lead">Video, design and marketing work: chapter films, a spec commercial, a full marketing year for a local pharmacy, my own brand identity, and the posters, invitations and ads in between.</p>
@@ -248,13 +264,14 @@
       <img src="images/p-headshot-tan-blazer.jpg" alt="Studio headshot of a woman in a tan blazer">
       <img src="images/p-headshot-laugh.jpg" alt="Studio portrait of a woman laughing in a dark blazer">
       <img src="images/p-headshot-suit.jpg" alt="Studio headshot of a man in a navy suit">
-      <img src="images/p-headshot-denim-laugh.jpg" alt="Studio headshot of a young woman in a denim top, laughing">
-      <img src="images/p-headshot-sisters.jpg" alt="Studio headshot of two sisters in green and denim, side by side">
-      <img src="images/p-headshot-girl-green.jpg" alt="Studio headshot of a girl in a green dress with a braid">
+      <img src="images/p-headshot-black-blazer.jpg" alt="Studio headshot of a woman in a black blazer and light blue shirt">
+      <img src="images/p-headshot-green-sweater.jpg" alt="Studio headshot of a man laughing in a green quarter-zip sweater">
+      <img src="images/p-headshot-red-jacket.jpg" alt="Studio headshot of a woman in a red jacket over a white tee">
     </div>
   </div>
 
   <div class="sec"><p class="label rule">Video</p>
+    <p class="prose sec-lead">Every video here is mine from start to finish: concept, filming, editing, color grading and sound.</p>
     <div class="vids">
       <figure class="vid"><div class="player" data-yt="mGoFYhAf6yA" data-src="video/make-an-impact.mp4" data-title="Make an Impact 2026"><button class="play" type="button" aria-label="Play Make an Impact 2026"><img src="images/video-make-an-impact.jpg" alt="Make an Impact, Make a Wish title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-impact">Make an Impact 2026</a></b><span>Chi Omega · Make-A-Wish · 4:16</span></figcaption></figure>
       <figure class="vid"><div class="player" data-yt="sGHPgX28cF8" data-src="video/welcome-to-chi-omega.mp4" data-title="Welcome to Chi Omega 2026"><button class="play" type="button" aria-label="Play Welcome to Chi Omega 2026"><img src="images/video-welcome-chi-omega.jpg" alt="Welcome to Chi Omega title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-impact">Welcome to Chi Omega 2026</a></b><span>Chi Omega · Chapter film · 4:36</span></figcaption></figure>
@@ -268,9 +285,8 @@
       <figure class="vid"><div class="player" data-src="video/sorority-life.mp4" data-title="Sorority Life"><button class="play" type="button" aria-label="Play Sorority Life"><img src="images/video-sorority-life.jpg" alt="A-State Sorority Life title card"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b>Sorority Life</b><span>A-State · 0:33</span></figcaption></figure>
       <figure class="vid"><div class="player" data-yt="qPALedo8Fls" data-src="video/stanley-30.mp4" data-title="Stanley Quencher :30"><button class="play" type="button" aria-label="Play the Stanley Quencher 30-second spot"><img src="images/yt-qPALedo8Fls.jpg" alt="Still from the Stanley Quencher commercial"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b><a href="#case-stanley">Stanley Quencher</a></b><span>Spec commercial · :30 / :06 / pitch</span></figcaption></figure>
       <figure class="vid"><div class="player" data-yt="SLY8nv7CcPA" data-src="video/color-reel.mp4" data-title="Color correction reel"><button class="play" type="button" aria-label="Play the color correction reel"><img src="images/yt-SLY8nv7CcPA.jpg" alt="Still from the color correction reel"><span class="pbtn" aria-hidden="true">▶</span></button></div><figcaption><b>Color correction reel</b><span>Before &amp; after grades · 1:50</span></figcaption></figure>
-      <figure class="vid"><img src="images/yt-jeoq3w4RFJY.jpg" alt="Still from the short film The Heist"><figcaption><b>The Heist</b><span>Short film · Coming soon</span></figcaption></figure>
     </div>
-    <p class="note"><b>Kaysen:</b> all eight Chi Omega films from your channel are here, newest first. Two more on the channel are left off: Where I'm From and Generational Media Video (2022 class work), say if you want them. Rob A Bank and The Heist both say "video unavailable" on YouTube, so neither can play yet. Add your role for each video, like "Shot, edited and color graded."</p>
+    <p class="note"><b>Kaysen:</b> all eight Chi Omega films from your channel are here, newest first. Two more on the channel are left off: Where I'm From and Generational Media Video (2022 class work), say if you want them. Rob A Bank and The Heist both say "video unavailable" on YouTube, so they're left off until one is re-uploaded.</p>
   </div>
 
   <div class="sec"><p class="label rule">Design</p>
@@ -288,7 +304,6 @@
       <figure class="des"><img src="images/d-ohcrumb-hotline.jpg" alt="Oh Crumb post: Crumb Crisis Hotline, with a cream cheese bagel on a green to blue gradient"><figcaption><b>Oh Crumb</b><span>Crumb Crisis Hotline</span></figcaption></figure>
       <figure class="des"><img src="images/d-cardinal-cabinet.jpg" alt="Blue retro poster listing the 2026 Cardinal Cabinet"><figcaption><b>Cardinal Cabinet</b><span>Roster poster</span></figcaption></figure>
       <figure class="des"><img class="fit" src="images/d-vote-homecoming.jpg" alt="Vote for homecoming story with red script over a photo of a couple by a HOWL sign"><figcaption><b>Vote for homecoming</b><span>Story graphic</span></figcaption></figure>
-      <figure class="des"><img src="images/design-aqua-excursions.jpg" alt="Aqua Excursions kayak sale ad"><figcaption><b>Aqua Excursions</b><span>Print ad</span></figcaption></figure>
       <figure class="des"><img class="fit" src="images/d-astate-health-1.jpg" alt="Black slide with huge red and white type reading A-State Free Campus Service, Student Health Care"><figcaption><b>Student Health Care</b><span>Presentation</span></figcaption></figure>
       <figure class="des"><img src="images/d-swift-welcome.jpg" alt="Welcome Video cover with a globe mark on a grainy sunset gradient"><figcaption><b>The Swift Effect</b><span>Welcome video cover</span></figcaption></figure>
       <figure class="des"><img src="images/d-swift-blog.jpg" alt="New blog post graphic with a bold white headline over a concert crowd"><figcaption><b>The Swift Effect</b><span>New blog post</span></figcaption></figure>
@@ -300,8 +315,10 @@
       <figure class="des"><img src="images/design-inner-city.jpg" alt="Inner City double exposure"><figcaption><b>Inner City</b><span>Double exposure</span></figcaption></figure>
       <figure class="des"><img src="images/design-perfect-stranger.jpg" alt="Perfect Stranger movie poster"><figcaption><b>Perfect Stranger</b><span>Movie poster</span></figcaption></figure>
       <figure class="des"><div class="ba" style="--pos:50%"><img src="images/restore-after.jpg" alt="Army portrait restored and colorized"><img class="before" src="images/restore-before.jpg" alt="Damaged original army portrait"><span class="handle" aria-hidden="true"></span><input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare before and after restoration"></div><figcaption><b>Photo restoration</b><span>Drag to compare</span></figcaption></figure>
+      <figure class="des"><img src="images/design-aqua-excursions.jpg" alt="Aqua Excursions kayak sale ad"><figcaption><b>Aqua Excursions</b><span>Print ad</span></figcaption></figure>
       <figure class="des"><img src="images/design-frank-stein.jpg" alt="The Curse of Frank and Stein poster"><figcaption><b>Frank &amp; Stein</b><span>Composite poster</span></figcaption></figure>
     </div>
+  </div>
   </div>
   </div>
   </div>
@@ -459,11 +476,11 @@
       <div><dt>Client</dt><dd>Chi Omega, Arkansas State</dd></div>
       <div><dt>Years</dt><dd>2024 – 2026</dd></div>
       <div><dt>Films</dt><dd>Eight: Make an Impact and an info film each year 2024–26, Sisterhood, Pref Night</dd></div>
-      <div><dt>Role</dt><dd><span class="fill">[shot / edited / directed]</span></dd></div>
+      <div><dt>Role</dt><dd>Concept, filming, editing, color grading and sound</dd></div>
     </dl>
     <div class="text">
       <p class="prose">Eight short films for Arkansas State's Chi Omega chapter over three recruitment seasons. Each year has a Make an Impact film about the chapter's work with Make-A-Wish, Chi Omega's national philanthropy partner, and an info film that introduces the chapter. 2024 also brought Sisterhood and a pref night film.</p>
-      <p class="note"><b>Kaysen:</b> who was each film for, what did you do on it, and where was it shown (recruitment, social, chapter meetings)?</p>
+      <p class="prose">I made every one of them solo, from planning the shoot through the final grade and mix, working with the chapter each season on what the films needed to say.</p>
     </div>
   </div>
   <div class="next"><a href="#case-stanley">Next: Stanley Quencher →</a><a class="btn" href="#contact">Hire me</a></div>
@@ -484,11 +501,12 @@
   <div class="story">
     <dl class="facts">
       <div><dt>Deliverables</dt><dd>:30 · :15 · :06 + pitch deck</dd></div>
-      <div><dt>Role</dt><dd><span class="fill">[concept / shot / edited]</span></dd></div>
+      <div><dt>Role</dt><dd>Concept, filming, editing and the pitch presentation</dd></div>
     </dl>
     <div class="text">
       <p class="prose">A spec commercial for the Stanley Quencher tumbler, cut to 30, 15, and 6 seconds, with a pitch presentation to sell the idea. The same concept had to work at every length.</p>
-      <p class="note"><b>Kaysen:</b> say where each length was meant to run and whether this was a class project. Only the :30 and :06 are on YouTube; upload the :15 (unlisted is fine) and it can play here too.</p>
+      <p class="prose">I wrote the concept, shot and edited every cut, and built and presented the pitch that sold the campaign.</p>
+      <p class="note"><b>Kaysen:</b> only the :30 and :06 are on YouTube. Upload the :15 (unlisted is fine) and it can play here too.</p>
     </div>
   </div>
   <div class="next"><a href="#case-pharmacy">Next: Southern Pharmacy →</a><a class="btn" href="#contact">Hire me</a></div>
@@ -502,6 +520,7 @@
       <img class="front" src="images/headshot-field.jpg" alt="Kaysen on the A-State football field">
     </div>
     <div class="about-text">
+      <svg class="stamp s4" aria-hidden="true"><use href="#ostar"/></svg>
       <p class="label rule">About</p>
       <h1>Nice to meet you</h1>
       <p class="prose">I'm Kaysen Lomax, a photographer and multimedia creator in Jonesboro, Arkansas. I've photographed seniors, couples, families, and events across Northeast Arkansas since 2018, and since January 2026 I've shot weddings as a contract photographer with Rustic Pine Media.</p>
@@ -522,7 +541,7 @@
 
 <!-- ==================== CONTACT ==================== -->
 <section class="page" data-page="contact">
-  <div class="ptitle"><p class="label rule">Contact</p><h1>Let's talk</h1><p class="lead">Booking a session, hiring for a role, or just have a question: this form goes straight to me.</p></div>
+  <div class="ptitle contact-title"><svg class="stamp s4" aria-hidden="true"><use href="#arrow"/></svg><p class="label rule">Contact</p><h1>Let's talk</h1><p class="lead">Booking a session, hiring for a role, or just have a question: this form goes straight to me.</p></div>
   <div class="contact">
     <form id="inquiry" novalidate>
       <fieldset class="who-set">
@@ -564,7 +583,7 @@
   <nav class="foot-nav" aria-label="Footer"><a href="#about">About</a><a href="#seniors">Seniors</a><a href="#weddings">Weddings</a><a href="#families">Families &amp; Events</a><a href="#brands">Brands &amp; Media</a><a href="#contact">Contact</a></nav>
   <div class="foot-mid">
     <a class="email-link" href="mailto:lomax.kaysenk@gmail.com">e: lomax.kaysenk@gmail.com</a>
-    <div class="foot-mark"><svg class="stamp" aria-hidden="true"><use href="#sprig"/></svg><span>Kaysen Lomax</span><small>Photographer &amp; multimedia creator · Jonesboro, Arkansas</small></div>
+    <div class="foot-mark"><svg class="stamp" aria-hidden="true"><use href="#spark"/></svg><span>Kaysen Lomax</span><small>Photographer &amp; multimedia creator · Jonesboro, Arkansas</small></div>
     <a href="#about">Résumé ↗</a>
   </div>
   <div class="strip" aria-hidden="true"><img src="images/p-couple-capitol-hall.jpg" alt=""><img src="images/p-couple-proposal.jpg" alt=""><img src="images/p-senior-clocktower-toss.jpg" alt=""><img src="images/p-senior-redwolf-mural.jpg" alt=""><img src="images/p-wedding-reception-fun.jpg" alt=""></div>

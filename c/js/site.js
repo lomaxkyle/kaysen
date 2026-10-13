@@ -107,6 +107,7 @@
     }
     m.title = p.dataset.title || 'Video';
     p.appendChild(m);
+    if (m.play) m.play().catch(() => {}); /* a browser that refuses autoplay just shows the controls */
   }
   players.forEach(p => $('.play', p).addEventListener('click', () => startPlayer(p)));
   $$('.pset').forEach(set => {
