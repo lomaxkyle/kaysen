@@ -153,15 +153,14 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 
 /* ---------- audience pages ---------- */
 .aud-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(28px,4vw,64px);padding:clamp(40px,6vw,90px) var(--gutter);background:var(--sky);align-items:center}
-.aud-head > div:first-child{grid-column:1/span 6;display:grid;gap:18px}
+.aud-head > div:first-child{grid-column:1/span 5;display:grid;gap:18px}
 .aud-head h1{font-size:clamp(3rem,7vw,6.2rem);font-style:italic;line-height:.98}
 .aud-head .lead{font-size:1.1rem;max-width:52ch}
 .brand-head > div:first-child{grid-column:1/span 9}
-.prints{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px);max-width:560px;justify-self:end}
+.prints{grid-column:6/span 7;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);max-width:680px;justify-self:end}
 .prints > *{width:100%;aspect-ratio:2/3;object-fit:cover;box-shadow:0 10px 24px -14px rgba(31,45,58,.45);background:var(--paper)}
 .prints > :nth-child(odd){transform:rotate(-1.6deg)}
 .prints > :nth-child(even){transform:rotate(1.8deg) translateY(28px)}
-.prints.two{grid-template-columns:1fr 1fr}
 .phprint{display:grid;place-content:center;gap:4px;text-align:center;padding:12px;font-size:.8rem;color:var(--note-ink);background:repeating-linear-gradient(135deg,#DCE5EC 0 16px,#F0F4F7 16px 32px)!important}
 .phprint b{font:500 .72rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
 .aud-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(28px,4vw,64px);padding:clamp(56px,7vw,100px) var(--gutter)}
