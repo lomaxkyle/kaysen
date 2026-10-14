@@ -56,8 +56,8 @@ body.clean .fill{background:none;color:inherit;padding:0}
 body.clean .ph b,body.clean .phprint b{visibility:hidden}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border:1.5px solid var(--navy);background:var(--butter);color:var(--navy);font:500 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
-.btn:hover{background:#F3E88F;border-color:var(--navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 30px;border:1.5px solid var(--navy);border-radius:999px;background:var(--navy);color:var(--paper);font:500 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--steel-darker);border-color:var(--steel-darker)}
 .btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn.ghost:hover{background:var(--navy);color:var(--paper)}
 .btns{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
