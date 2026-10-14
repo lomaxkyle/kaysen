@@ -324,7 +324,7 @@ a.vid:hover b{text-decoration:underline}
 .contact aside{grid-column:9/span 4;display:grid;gap:22px;align-content:start;background:var(--sky);padding:28px;position:relative}
 .contact aside .em{position:relative}
 .contact aside .em .label{margin-bottom:34px}
-.contact aside .mk-point{width:54px;height:54px;top:-4px;right:auto;left:58px;transform:scaleY(-1) rotate(-40deg)}
+.contact aside .mk-point{width:54px;height:54px;top:-4px;right:auto;left:58px;transform:rotate(60deg)}
 .contact aside .label{width:max-content}
 .contact aside .label{margin-bottom:6px}
 .contact aside .email{font:400 1.2rem var(--serif);overflow-wrap:anywhere;user-select:all}
