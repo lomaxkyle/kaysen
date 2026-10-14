@@ -130,7 +130,7 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .doors .img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .doors a:hover img{transform:scale(1.03)}
 .doors .img.ph{display:grid;background:repeating-linear-gradient(135deg,#C3D2DD 0 16px,#DCE5EC 16px 32px)}
-.tagbtn{display:block;text-align:center;color:var(--navy);font:500 .76rem/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;padding:16px 4px 0}
+.tagbtn{display:block;text-align:center;color:var(--navy);font:500 clamp(.8rem,1.15vw,1.05rem)/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;padding:18px 4px 0}
 .doors a:hover .tagbtn{text-decoration:underline;text-underline-offset:5px}
 .ph{display:grid;place-content:center;gap:4px;text-align:center;padding:16px;color:var(--note-ink);font-size:.82rem;background:repeating-linear-gradient(135deg,#DCE5EC 0 16px,#EAF0F4 16px 32px)}
 .ph b{font:500 .74rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
@@ -383,7 +383,7 @@ a.vid:hover b{text-decoration:underline}
   .mk-point{width:84px;height:84px;top:2px;right:10px}
   .mk-arrow{width:56px;height:56px;top:-22px}
   .mk-star{width:40px;height:40px;top:-14px}
-  .tagbtn{font-size:.68rem;padding-top:12px;letter-spacing:.12em}
+  .tagbtn{font-size:.8rem;padding-top:12px;letter-spacing:.1em}
   .steps,.fields,.cv{grid-template-columns:1fr}
   .headshots{grid-template-columns:repeat(3,minmax(0,1fr))}
   .cases,.cases.four,.vids{grid-template-columns:1fr}
