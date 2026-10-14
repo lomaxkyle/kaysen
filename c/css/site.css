@@ -172,7 +172,8 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .review .quotes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px)}
 .review figure{margin:0;display:grid;gap:14px;align-content:start}
 .review figure+figure{border-left:1.5px solid var(--sand);padding-left:clamp(28px,4vw,48px)}
-@media(max-width:760px){.review .quotes{grid-template-columns:1fr}.review figure+figure{border-left:0;padding-left:0;border-top:1.5px solid var(--sand);padding-top:28px}}
+@media(max-width:760px){.review .quotes{gap:22px}.review figure+figure{padding-left:22px}.review blockquote{font-size:1.02rem}}
+@media(max-width:540px){.review .quotes{grid-template-columns:1fr}.review figure+figure{border-left:0;padding-left:0;border-top:1.5px solid var(--sand);padding-top:28px}}
 .review .who-said{font:500 .74rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
 
 /* ---------- audience pages ---------- */
@@ -323,8 +324,8 @@ a.vid:hover b{text-decoration:underline}
 #inquiry{grid-column:1/span 7;display:grid;gap:26px}
 .contact aside{grid-column:9/span 4;display:grid;gap:22px;align-content:start;background:var(--sky);padding:28px;position:relative}
 .contact aside .em{position:relative}
-.contact aside .em .label{margin-bottom:34px}
-.contact aside .mk-point{width:54px;height:54px;top:-4px;right:auto;left:58px;transform:rotate(60deg)}
+.contact aside .em .label{margin-bottom:22px}
+.contact aside .mk-point{width:42px;height:42px;top:-1px;right:auto;left:50px;transform:rotate(60deg)}
 .contact aside .label{width:max-content}
 .contact aside .label{margin-bottom:6px}
 .contact aside .email{font:400 1.2rem var(--serif);overflow-wrap:anywhere;user-select:all}
