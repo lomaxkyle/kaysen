@@ -322,8 +322,9 @@ a.vid:hover b{text-decoration:underline}
 .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px clamp(20px,3vw,40px);padding:0 var(--gutter) clamp(56px,7vw,100px)}
 #inquiry{grid-column:1/span 7;display:grid;gap:26px}
 .contact aside{grid-column:9/span 4;display:grid;gap:22px;align-content:start;background:var(--sky);padding:28px;position:relative}
-.contact aside .mk-point{width:60px;height:60px;top:14px;right:auto;left:96px;transform:scaleX(-1) rotate(52deg)}
-.contact aside{padding-top:64px}
+.contact aside .em{position:relative}
+.contact aside .em .label{margin-bottom:34px}
+.contact aside .mk-point{width:54px;height:54px;top:-4px;right:auto;left:58px;transform:scaleY(-1) rotate(-40deg)}
 .contact aside .label{width:max-content}
 .contact aside .label{margin-bottom:6px}
 .contact aside .email{font:400 1.2rem var(--serif);overflow-wrap:anywhere;user-select:all}
@@ -388,8 +389,6 @@ a.vid:hover b{text-decoration:underline}
   .mk-after{left:auto;right:-.3em;top:-1.05em;width:1.1em;height:1.1em}
   .hi-text h2 .mk-after{left:100%;right:auto;top:-1.15em;width:1.9em;height:1.9em;margin-left:-.5em}
   .mk-point{width:84px;height:84px;top:2px;right:10px}
-  .contact aside .mk-point{width:52px;height:52px;top:12px;left:88px}
-  .contact aside{padding-top:58px}
   .mk-arrow{width:56px;height:56px;top:-22px}
   .mk-star{width:40px;height:40px;top:-14px}
   .tagbtn{font-size:.8rem;padding-top:12px;letter-spacing:.1em}
