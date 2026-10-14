@@ -86,7 +86,7 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .group-btn[aria-expanded="true"] .chev{transform:translateY(.1em) rotate(-135deg)}
 .group-list{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .35s var(--ease),visibility 0s .35s}
 .group-list>div{overflow:hidden;display:grid;gap:6px;padding-left:clamp(20px,3vw,44px);border-left:1px solid rgba(245,245,245,.3);margin-left:.1em}
-.group-btn[aria-expanded="true"]+.group-list{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .35s var(--ease)}
+.menu.open .group-btn[aria-expanded="true"]+.group-list{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .35s var(--ease)}
 .group-btn[aria-expanded="true"]+.group-list>div{padding-block:10px 14px}
 .group-list a{font:400 clamp(1.5rem,3.4vw,2.6rem)/1.1 var(--serif);text-decoration:none}
 .group-list a:hover,.group-list a[aria-current="page"]{font-style:italic}

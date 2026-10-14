@@ -47,6 +47,8 @@
   if (rb) rb.addEventListener('click', () => { $('#resume-msg').hidden = false; });
 
   /* ---------- contact ---------- */
+  /* #contact/family opens the form with Family already chosen */
+  let pickWho = () => {};
   const form = $('#inquiry');
   if (form) {
     const radios = $$('[data-who]', form);
@@ -65,6 +67,7 @@
       if (n) { setWho(n.dataset.who); n.focus(); e.preventDefault(); }
     });
     setWho('senior');
+    pickWho = who => { if (radios.some(b => b.dataset.who === who)) setWho(who); };
     const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
     /* messages go to Kaysen's Gmail through FormSubmit (the first one ever sent asks her to confirm the address) */
     const INBOX = 'https://formsubmit.co/ajax/kaysenlomaxphotography@gmail.com';
@@ -161,9 +164,10 @@
     closeMenu(false);
     players.forEach(stopPlayer);
     pickFilm(page, sub);
+    if (page.dataset.page === 'contact') pickWho(sub || 'senior');
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     const h1 = $('h1', page);
-    document.title = key === 'home' ? 'Kaysen Lomax · Photographer & Multimedia Creator · Jonesboro, AR' : `${h1 ? h1.textContent.trim() : ''} · Kaysen Lomax`;
+    document.title = key === 'home' ? 'Kaysen Lomax · Northeast Arkansas Photographer' : `${h1 ? h1.textContent.trim() : ''} · Kaysen Lomax`;
   }
   addEventListener('hashchange', route);
   /* clicking a link to the page you're already on still closes the menu and returns to the top */
