@@ -108,9 +108,11 @@ body.clean .ph b,body.clean .phprint b{visibility:hidden}
 .hero-card .nm{font:400 clamp(2.6rem,6vw,5.6rem)/.95 var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
 .hero-card .role{font:italic 400 clamp(1.35rem,2.1vw,1.9rem)/1.1 var(--serif);color:var(--steel-deep)}
 .hero-card .rule{width:64px;height:1.5px;background:var(--sand)}
-.hero-card .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.hero-card .tags a{font:500 .72rem var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:var(--butter);color:var(--navy);padding:8px 12px}
-.hero-card .tags a:hover{background:var(--sky)}
+.hero-card .tags{display:flex;flex-wrap:wrap;justify-content:center;row-gap:6px}
+.hero-card .tags a{font:500 .76rem var(--mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--navy);padding:6px 16px}
+.hero-card .tags a+a{border-left:1.5px solid var(--sand)}
+.hero-card .tags a:hover{text-decoration:underline;text-underline-offset:5px}
+@media(max-width:600px){.hero-card .tags{display:grid;grid-template-columns:1fr 1fr;width:100%}.hero-card .tags a{padding:6px 12px;font-size:.7rem}.hero-card .tags a+a{border-left:0}.hero-card .tags a:nth-child(even){border-left:1.5px solid var(--sand);justify-self:start}.hero-card .tags a:nth-child(odd){justify-self:end}}
 .hero-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(8px,1.2vw,16px);width:calc(100% - var(--gutter) * 2);margin-top:clamp(-90px,-7vw,-60px);position:relative}
 .hero-row img{width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:0 14px 30px -18px rgba(31,45,58,.55)}
 
